@@ -1,0 +1,6 @@
+persons:
+  all: All persons
+  discover: Discover person
+  title:
+    one: Person
+    other: Persons

@@ -1,0 +1,6 @@
+persons:
+  all: Toutes les personnes
+  discover: Découvrir la persone
+  title:
+    one: Personne
+    other: Personnes
