@@ -1,3 +1,3 @@
-module github.com/sebousan/hugolify-theme-persons
+module github.com/hugolify/hugolify-theme-persons
 
 go 1.19
