@@ -22,3 +22,7 @@ params:
     publication:
       desktop: "50x50"
       mobile: "50x50"
+
+# Default
+permalinks:
+  persons: /team/:slug/
