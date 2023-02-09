@@ -4,6 +4,8 @@ module:
       target: archetypes
     - source: assets
       target: assets
+    - source: content
+      target: content
     - source: i18n
       target: i18n
     - source: layouts
