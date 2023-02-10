@@ -1,3 +1,7 @@
 <div class="sidebar">
   {{ partial "persons/contact-list" . }}
+  {{ $offices := "persons/offices.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $offices ) }}
+    {{ partial $offices . }}
+  {{ end }}
 </div>
