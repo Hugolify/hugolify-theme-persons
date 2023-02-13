@@ -1,0 +1,6 @@
+<div class="content">
+  {{ $statutes := "persons/filters/statutes.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
+    {{ partial $statutes . }}
+  {{ end }}
+</div>
