@@ -1,6 +1,8 @@
 persons:
   all: All persons
   discover: Discover person
+  latest: Latest persons
+  more: Discover more persons
   title:
     one: Person
     other: Persons
