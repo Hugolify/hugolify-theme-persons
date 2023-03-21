@@ -1,4 +1,4 @@
-{{ $hasStatutes := partial "func/isTaxonomyAvailable" (dict "pages" .Pages "taxonomy" "statutes") }}
+{{ $hasStatutes := partial "func/HasTaxonomyAvailable" (dict "section" "persons" "taxonomy" "statutes") }}
 {{ if $hasStatutes }}
   <button class="btn-filter" type="button" data-bs-toggle="offcanvas" data-bs-target="#personsFilters" aria-controls="personsFilters">{{ i18n "filter" }}</button>
 {{ end }}
