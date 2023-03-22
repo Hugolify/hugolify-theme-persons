@@ -1,5 +1,11 @@
 .page-persons
-    
+    .hero
+        .hero-content + .hero-content
+            align-self: end
+        .contact-list
+            --bs-card-bg: #{$gray-200}
+            --bs-card-spacer-x: 2rem
+            --bs-card-spacer-y: 2rem
     .latest
         @include rfs($global-spacing, margin-top)
     div + .latest 
@@ -10,10 +16,13 @@
             >
                 .featured-image
                     grid-column: 1/4
+                    grid-row: 1
                 .content
                     grid-column: 4/9
+                    grid-row: 1
                 .sidebar
                     grid-column: 9/13
+                    grid-row: 1
                 .latest
                     grid-column: 1/13
 
