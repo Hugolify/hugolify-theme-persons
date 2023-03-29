@@ -5,7 +5,7 @@
 {{ end }}
 {{ $w := "" }}
 {{ if $desktop }}
-  {{ $w = printf "style='width: %spx'" (index (split $desktop "x") 0 | default 100)  }}
+  {{ $w = printf "style='--card-media: %spx'" (index (split $desktop "x") 0 | default 100)  }}
 {{ end }}
 <div {{ safeHTMLAttr $w }}>
   {{- with .Params.image}}
