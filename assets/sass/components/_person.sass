@@ -8,14 +8,13 @@
     @extend .card
     .description
         @extend .small
+    .content + div
+        @extend .ratio
+        @extend .ratio-1x1
+        align-self: flex-start
+        background-color: $light
+        border-radius: 50%
+        max-width: var(--card-media)
+        order: -1
     a
         @extend .stretched-link
-        & + div
-            @extend .ratio
-            @extend .ratio-1x1
-            align-self: flex-start
-            background-color: $light
-            border-radius: 50%
-            max-width: var(--card-media)
-            order: -1
-
