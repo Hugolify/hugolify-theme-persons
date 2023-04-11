@@ -7,9 +7,9 @@
             --bs-card-spacer-x: 2rem
             --bs-card-spacer-y: 2rem
     .latest
-        @include rfs($global-spacing, margin-top)
+        @include margin-top($global-spacing)
     div + .latest 
-        @include rfs(calc(#{$global-spacing} * 2), margin-top)
+        @include margin-top($global-spacing-double)
     
     @include media-breakpoint-up(md)
         .grid
