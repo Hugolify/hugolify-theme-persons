@@ -3,31 +3,30 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": {{ .Title | plainify | safeHTML }},
+    "url": {{ .Permalink }},
 
-    {{ with .Params.image }}
-      "image": {{ . | absURL }},
+    {{- with .Params.image }}
+      "image": {{ .src | absURL }},
     {{ end }}
 
-    {{ with .Description }}
+    {{- with .Description }}
       "description": {{ partial "func/TruncateContent" (dict "content" .) }},
     {{ end }}
 
-    "url": {{ .Permalink }},
-
-    {{ with .Params.statutes }}
-      {{ with index site.Data.statutes . }}
-        "jobTitle": {{ .title | plainify | safeHTML }},
+    {{- if .Params.statutes }}
+      {{ range .GetTerms "statutes" }}
+        "jobTitle": {{ .Title | plainify | safeHTML }},
       {{ end }}
     {{ end }}
 
-    {{ with .Params.contact }}
-      {{ with .email }}
+    {{- with .Params.contact }}
+      {{- with .email }}
         "email": {{ . | plainify | safeHTML }},
       {{ end }}
-      {{ with .phone }}
+      {{- with .phone }}
         "telephone": {{ . | plainify | safeHTML }},
       {{ end }}
-      {{ with .fax }}
+      {{- with .fax }}
         "faxNumber": {{ . | plainify | safeHTML }},
       {{ end }}
     {{ end }}
