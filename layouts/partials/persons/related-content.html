@@ -1,0 +1,8 @@
+{{ $posts := "persons/posts.html" }}
+{{ if templates.Exists ( printf "partials/%s" $posts ) }}
+  {{ partial $posts . }}
+{{ end }}
+{{ $publications := "persons/publications.html" }}
+{{ if templates.Exists ( printf "partials/%s" $publications ) }}
+  {{ partial $publications . }}
+{{ end }}

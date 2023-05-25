@@ -3,4 +3,12 @@
   {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
     {{ partial $statutes . }}
   {{ end }}
+  {{ $expertises := "persons/filters/expertises.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $expertises ) }}
+    {{ partial $expertises . }}
+  {{ end }}
+  {{ $offices := "persons/filters/offices.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $offices ) }}
+    {{ partial $offices . }}
+  {{ end }}
 </div>
