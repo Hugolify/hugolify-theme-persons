@@ -1,9 +1,0 @@
-{{ $where := where .Paginator.Pages "Section" "persons" }}
-{{ $paginator := sort ($where) "Params.statutes" }}
-{{ if $paginator }}
-  <section class="expertise-persons">
-    <h2>{{ i18n "expertises.discover_persons" (dict "Title" (.Title | lower)) }}</h2>
-    {{ partial "persons/items" $paginator }}
-    {{ partial "nav/pagination.html" . }}
-  </section>
-{{ end }}

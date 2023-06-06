@@ -1,6 +1,6 @@
-{{ $offices := "persons/offices.html" }}
-{{ if templates.Exists ( printf "partials/%s" $offices ) }}
+{{ $persons_offices := "persons/persons_offices.html" }}
+{{ if templates.Exists ( printf "partials/%s" $persons_offices ) }}
   <div class="sidebar"{{ partial "func/SetAnim" (dict "element" "sidebar") }}>
-    {{ partial $offices . }}
+    {{ partial $persons_offices . }}
   </div>
 {{ end }}

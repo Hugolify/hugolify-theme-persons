@@ -19,6 +19,13 @@
       {{ end }}
     {{ end }}
 
+    {{- if .Params.persons_expertises }}
+      {{ range .GetTerms "persons_expertises" }}
+        {{- $expertise := partial "func/GetRealExpertise" . -}}
+        "knowsAbout": {{ $expertise.Title | plainify | safeHTML }},
+      {{ end }}
+    {{ end }}
+
     {{- with .Params.contact }}
       {{- with .email }}
         "email": {{ . | plainify | safeHTML }},

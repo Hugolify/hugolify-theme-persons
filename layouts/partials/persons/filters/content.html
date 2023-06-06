@@ -3,11 +3,11 @@
   {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
     {{ partial $statutes . }}
   {{ end }}
-  {{ $expertises := "persons/filters/expertises.html" }}
+  {{ $expertises := "persons/filters/persons_expertises.html" }}
   {{ if templates.Exists ( printf "partials/%s" $expertises ) }}
     {{ partial $expertises . }}
   {{ end }}
-  {{ $offices := "persons/filters/offices.html" }}
+  {{ $offices := "persons/filters/persons_offices.html" }}
   {{ if templates.Exists ( printf "partials/%s" $offices ) }}
     {{ partial $offices . }}
   {{ end }}
