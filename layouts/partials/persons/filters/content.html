@@ -1,5 +1,5 @@
 <div class="content">
-  {{ $statutes := "persons/filters/statutes.html" }}
+  {{ $statutes := "persons/filters/persons_statutes.html" }}
   {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
     {{ partial $statutes . }}
   {{ end }}

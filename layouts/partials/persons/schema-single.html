@@ -13,8 +13,8 @@
       "description": {{ partial "func/TruncateContent" (dict "content" .) }},
     {{ end }}
 
-    {{- if .Params.statutes }}
-      {{ range .GetTerms "statutes" }}
+    {{- if .Params.persons_statutes }}
+      {{ range .GetTerms "persons_statutes" }}
         "jobTitle": {{ .Title | plainify | safeHTML }},
       {{ end }}
     {{ end }}

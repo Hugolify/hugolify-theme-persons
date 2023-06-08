@@ -1,4 +1,4 @@
-{{ $hasStatutes := partial "func/HasTaxonomyAvailable" (dict "section" "persons" "taxonomy" "statutes") }}
+{{ $hasStatutes := partial "func/HasTaxonomyAvailable" (dict "section" "persons" "taxonomy" "persons_statutes") }}
 {{ $hasExpertises := partial "func/HasTaxonomyAvailable" (dict "section" "persons" "taxonomy" "persons_expertises") }}
 {{ $hasOffices := partial "func/HasTaxonomyAvailable" (dict "section" "persons" "taxonomy" "persons_offices") }}
 {{ if or $hasStatutes $hasExpertises $hasOffices }}

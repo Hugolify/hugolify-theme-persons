@@ -2,9 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="hero-content">
-        {{ $statutes := "persons/statutes.html" }}
-        {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
-          {{ partial $statutes . }}
+        {{ $persons_statutes := "persons/persons_statutes.html" }}
+        {{ if templates.Exists ( printf "partials/%s" $persons_statutes ) }}
+          {{ partial $persons_statutes . }}
         {{ end }}
         <h1>{{ partial "func/PrepareHTML" .Title }}</h1>
         {{ partial "commons/description" . }}
