@@ -16,7 +16,7 @@ params:
       desktop: "100x100"
       mobile: "100x100"
     image:
-      desktop: "300x"
+      desktop: "306x"
       mobile: "198x"
     post:
       desktop: "50x50"
