@@ -1,5 +1,5 @@
 ---
 isIndex: true
-title: Persons
-url: persons
+title: Team
+url: team
 ---
