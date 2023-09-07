@@ -7,8 +7,8 @@
   {{ if templates.Exists ( printf "partials/%s" $expertises ) }}
     {{ partial $expertises . }}
   {{ end }}
-  {{ $offices := "persons/filters/persons_offices.html" }}
-  {{ if templates.Exists ( printf "partials/%s" $offices ) }}
-    {{ partial $offices . }}
+  {{ $places := "persons/filters/persons_places.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $places ) }}
+    {{ partial $places . }}
   {{ end }}
 </div>
