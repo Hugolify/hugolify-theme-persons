@@ -1,23 +1,23 @@
 .person
-    --bs-card-spacer-x: 0
+    --bs-card-bg: transparent
     --bs-card-border-width: 0
     --bs-card-border-radius: 0
-    --bs-card-inner-border-radius: 0
-    --bs-card-bg: transparent
     --bs-card-cap-bg: transparent
+    --bs-card-inner-border-radius: 0
+    --bs-card-spacer-x: 0rem
+    --bs-card-spacer-y: 0rem
     @extend .card
     .description
         @extend .small
-    .content + div
+    .media
+        --bs-aspect-ratio: 100%
         @extend .ratio
-        @extend .ratio-1x1
         align-self: flex-start
         background-color: $light
         border-radius: 50%
+        margin-bottom: calc(var(--bs-card-spacer-y) * -1 + #{$spacer})
         max-width: var(--card-media)
         order: -1
-    picture
-        @extend .avatar
     img
         height: auto
         width: 100%
