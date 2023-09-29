@@ -1,3 +1,7 @@
+{{ $realestates := "persons/realestates.html" }}
+{{ if templates.Exists ( printf "partials/%s" $realestates ) }}
+  {{ partial $realestates . }}
+{{ end }}
 {{ $posts := "persons/posts.html" }}
 {{ if templates.Exists ( printf "partials/%s" $posts ) }}
   {{ partial $posts . }}
