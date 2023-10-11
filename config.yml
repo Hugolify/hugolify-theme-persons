@@ -18,12 +18,6 @@ params:
     image:
       desktop: "306x"
       mobile: "198x"
-    post:
-      desktop: "50x50"
-      mobile: "50x50"
-    publication:
-      desktop: "50x50"
-      mobile: "50x50"
 
 # Default
 permalinks:
