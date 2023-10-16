@@ -53,12 +53,17 @@ aside.person
                 &::before
                     @include icon("envelope")
                     margin-right: .5em
+            .fax
+                &::before
+                    @include icon("printer")
+                    margin-right: .5em
             .phone
                 &::before
                     @include icon("phone")
                     margin-right: .5em
     .btn
         @extend .btn-primary
+        text-wrap: balance
     .more
         font-size: $small-font-size
         @if variable-exists(bootstrap-icons-map)
