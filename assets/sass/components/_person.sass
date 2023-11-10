@@ -79,3 +79,8 @@ aside.person
                 vertical-align: -0.25em
     a::after
         content: none
+
+    .sidebar > & + &
+        margin-top: - $spacer
+        @include media-breakpoint-up(md)
+            margin-top: calc(#{$global-spacing} * -1 + #{$spacer})
