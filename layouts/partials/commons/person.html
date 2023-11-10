@@ -54,8 +54,13 @@
           {{- $value := string (mul (div $y $w) 100) -}}
           {{- $ratio = printf "--bs-aspect-ratio: %s%s;" $value "%" -}}
           {{- $media := printf "--card-media: %spx;" (string $w) -}}
+          {{ if $mobile }}
+            {{- $w := float (index (split $mobile "x") 0 | default 100) -}}
+            {{- $media = printf "%s --card-media-mobile: %spx;" $media (string $w) -}}
+          {{ end }}
           {{- $style = printf "style='%s %s'" $ratio $media -}}
         {{ end }}
+        
         <div class="media" {{ safeHTMLAttr $style }}>
           {{ partial "commons/image.html" (dict
             "src" .src
