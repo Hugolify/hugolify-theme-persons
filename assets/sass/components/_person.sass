@@ -84,3 +84,6 @@ aside.person
         margin-top: - $spacer
         @include media-breakpoint-up(md)
             margin-top: calc(#{$global-spacing} * -1 + #{$spacer})
+
+    .content > &
+        flex-direction: row
