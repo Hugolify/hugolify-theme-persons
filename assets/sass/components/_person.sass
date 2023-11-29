@@ -28,9 +28,15 @@
 
 aside.person
     --bs-card-bg: #{$light}
-    --bs-card-border-radius: 1rem
-    --bs-card-spacer-x: 2rem
-    --bs-card-spacer-y: 2rem
+    --bs-card-spacer-x: #{$gutter-mobile}
+    --bs-card-spacer-y: #{$gutter-mobile}
+    @include media-breakpoint-down(md)
+        margin-left: - $gutter-mobile
+        margin-right: - $gutter-mobile
+    @include media-breakpoint-up(md)
+        --bs-card-border-radius: 1rem
+        --bs-card-spacer-x: 2rem
+        --bs-card-spacer-y: 2rem
     .media
         --bs-aspect-ratio: 100%
         --card-media: 50%
