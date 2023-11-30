@@ -6,39 +6,41 @@
 {{- $show_image := .show_image | default true -}}
 {{- $show_btn := .show_btn | default true -}}
 
-{{ with $person }}
+{{- with $person -}}
+  {{- $type := .Type -}}
   <aside class="person">
     <div class="content">
-      {{ if $show_status }}
-        {{ $persons_statutes := "persons/persons_statutes.html" }}
-        {{ if templates.Exists (printf "partials/%s" $persons_statutes) }}
-          {{ partial $persons_statutes . }}
-        {{ end }}
-      {{ end }}
-      {{ with .Title }}
-        <p class="name">{{ partial "func/PrepareHTML" . }}</p>
-      {{ end }}
-      {{ if $show_description }}
+      {{- if $show_status -}}
+        {{- $persons_statutes := "persons/persons_statutes.html" -}}
+        {{- if templates.Exists (printf "partials/%s" $persons_statutes) -}}
+          {{- partial $persons_statutes . -}}
+        {{- end -}}
+      {{- end -}}
+      {{- with .Title -}}
+        {{- $title := cond (eq $type "persons") (.) (. | humanize) -}}
+        <p class="name">{{ partial "func/PrepareHTML" $title }}</p>
+      {{- end -}}
+      {{- if $show_description -}}
         {{ with .Description }}
           <p class="description">{{ partial "func/TruncateContent" (dict "content" .) }}</p>
         {{ end }}
-      {{ end }}
-      {{ if $show_contacts }}
+      {{- end -}}
+      {{- if $show_contacts -}}
         {{ with .Params.contact }}
           {{ partial "commons/contact/contacts.html" . }}
         {{ end }}
-      {{ end }}
-      {{ $more := i18n (printf "%s.discover" $section) }}
+      {{- end -}}
+      {{- $more := i18n (printf "%s.discover" $section) -}}
       {{ if not $more }}
-        {{ $more = i18n "more" }}
+        {{- $more = i18n "more" -}}
       {{ end }}
-      {{ $class := "btn" }}
+      {{- $class := "btn" -}}
       {{ if not $show_btn }}
-        {{ $class = "more" }}
+        {{- $class = "more" -}}
       {{ end }}
       <p><a href="{{ .Permalink }}" class="{{ $class }}">{{ $more }}</a></p>
     </div>
-    {{ if $show_image }}
+    {{- if $show_image -}}
       {{ with .Params.image}}
         {{- $desktop := site.Params.persons.thumbnail.desktop -}}
         {{- $mobile := site.Params.persons.thumbnail.mobile -}}
@@ -48,7 +50,7 @@
         {{ end }}
         {{- $ratio := "--bs-aspect-ratio: 100%;" -}}
         {{- $style := printf "style='%s'" $ratio -}}
-        {{ if $desktop }}
+        {{- if $desktop -}}
           {{- $w := float (index (split $desktop "x") 0 | default 100) -}}
           {{- $y := float (index (split $desktop "x") 1 | default 100) -}}
           {{- $value := string (mul (div $y $w) 100) -}}
@@ -59,7 +61,7 @@
             {{- $media = printf "%s --card-media-mobile: %spx;" $media (string $w) -}}
           {{ end }}
           {{- $style = printf "style='%s %s'" $ratio $media -}}
-        {{ end }}
+        {{- end -}}
         
         <div class="media" {{ safeHTMLAttr $style }}>
           {{ partial "commons/image.html" (dict
@@ -71,6 +73,6 @@
           ) }}
         </div>
       {{ end }}
-    {{ end }}
+    {{- end }}
   </aside>
-{{ end }}
+{{- end -}}
