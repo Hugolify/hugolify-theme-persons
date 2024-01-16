@@ -76,13 +76,9 @@ aside.person
         @extend .btn-primary
         text-wrap: balance
     .more
+        @include more
         font-size: $small-font-size
-        @if variable-exists(bootstrap-icons-map)
-            &::before
-                @include icon("arrow-right")
-                font-size: 1rem
-                margin-right: .5rem
-                vertical-align: -0.25em
+
     a::after
         content: none
 
