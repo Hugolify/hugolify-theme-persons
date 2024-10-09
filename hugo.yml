@@ -11,6 +11,9 @@ module:
     - source: layouts
       target: layouts
 params:
+  admin:
+    collections:
+      persons: true
   persons:
     thumbnail:
       desktop: '100x100'
