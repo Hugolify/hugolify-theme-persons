@@ -13,7 +13,8 @@ module:
 params:
   admin:
     collections:
-      persons: true
+      persons:
+        enable: true
   persons:
     thumbnail:
       desktop: '100x100'
