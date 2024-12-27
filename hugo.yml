@@ -26,3 +26,5 @@ params:
 # Default
 permalinks:
   persons: /team/:slug/
+  section:
+    persons: /team/
