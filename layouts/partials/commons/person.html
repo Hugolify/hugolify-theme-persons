@@ -30,15 +30,10 @@
           {{ partial "commons/contact/contacts.html" . }}
         {{ end }}
       {{- end -}}
-      {{- $more := i18n (printf "%s.discover" $section) -}}
-      {{ if not $more }}
-        {{- $more = i18n "more" -}}
-      {{ end }}
-      {{- $class := "btn" -}}
-      {{ if not $show_btn }}
-        {{- $class = "more" -}}
-      {{ end }}
-      <p><a href="{{ .Permalink }}" class="{{ $class }}">{{ $more }}</a></p>
+      {{- if $show_btn -}}
+        {{- $title := i18n (printf "%s.discover" $section) -}}
+        <p><a href="{{ .Permalink }}" class="more" title="{{ $title | safeHTMLAttr}}">{{ i18n "more" }}</a></p>
+      {{- end -}}
     </div>
     {{- if $show_image -}}
       {{ with .Params.image}}
