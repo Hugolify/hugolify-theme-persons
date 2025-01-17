@@ -51,12 +51,12 @@ aside.person
         @extend .small
         color: $text-muted
     ul
+        @include margint-bottom($paragraph-margin-bottom)
+        @include margint-top($paragraph-margin-bottom)
         font-size: $small-font-size
         list-style: none
         line-height: 1.8
         padding-left: 0
-        margin-bottom: 1.5rem
-        margin-top: 1.5rem
         @if variable-exists(icons-map)
             b
                 display: none
@@ -78,6 +78,9 @@ aside.person
     .more
         @include more
         font-size: $small-font-size
+    ul:last-child,
+    p:last-child
+        margin-bottom: 0
 
     a::after
         content: none
