@@ -10,7 +10,7 @@
     {{ end }}
 
     {{- with .Description }}
-      "description": {{ partial "func/TruncateContent" (dict "content" .) }},
+      "description": {{ partial "func/TruncateContent.html" (dict "content" .) }},
     {{ end }}
 
     {{- if .Params.persons_statutes }}

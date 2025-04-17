@@ -1,4 +1,4 @@
-<header class="hero hero-with-second-content"{{ partial "func/SetAnim" (dict "element" "hero") }}>
+<header class="hero hero-with-second-content"{{ partial "func/SetAnim.html" (dict "element" "hero") }}>
   <div class="container">
     <div class="row">
       <div class="hero-content">
@@ -6,8 +6,8 @@
         {{ if templates.Exists ( printf "partials/%s" $persons_statutes ) }}
           {{ partial $persons_statutes . }}
         {{ end }}
-        <h1>{{ partial "func/PrepareHTML" .Title }}</h1>
-        {{ partial "commons/description" . }}
+        <h1>{{ partial "func/PrepareHTML.html" .Title }}</h1>
+        {{ partial "commons/description.html" . }}
       </div>
       <div class="hero-content">
         {{ partial "persons/contact-list" . }}

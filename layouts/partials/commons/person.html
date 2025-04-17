@@ -18,11 +18,11 @@
       {{- end -}}
       {{- with .Title -}}
         {{- $title := cond (eq $type "persons") (.) (. | humanize) -}}
-        <p class="name">{{ partial "func/PrepareHTML" $title }}</p>
+        <p class="name">{{ partial "func/PrepareHTML.html" $title }}</p>
       {{- end -}}
       {{- if $show_description -}}
         {{ with .Description }}
-          <p class="description">{{ partial "func/TruncateContent" (dict "content" .) }}</p>
+          <p class="description">{{ partial "func/TruncateContent.html" (dict "content" .) }}</p>
         {{ end }}
       {{- end -}}
       {{- if $show_contacts -}}
