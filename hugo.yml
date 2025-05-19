@@ -15,6 +15,9 @@ params:
     collections:
       persons:
         enable: true
+        filter:
+          - field: isIndex
+            value: false
         icon:
           sveltiacms: person
   persons:
