@@ -15,6 +15,8 @@ params:
     collections:
       persons:
         enable: true
+        icon:
+          sveltiacms: person
   persons:
     thumbnail:
       desktop: '100x100'
@@ -25,6 +27,7 @@ params:
 
 # Default
 permalinks:
-  persons: /team/:slug/
+  page:
+    persons: /team/:slug/
   section:
     persons: /team/
