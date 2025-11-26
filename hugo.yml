@@ -19,7 +19,12 @@ params:
           - field: isIndex
             value: false
         icon:
-          sveltiacms: person
+          bootstrap_icons: person
+          iconoir: user
+          material_icons: person
+          material_symbols: person
+          lucide: user
+          sveltiacms: person # legacy
   persons:
     thumbnail:
       desktop: '100x100'
