@@ -21,7 +21,7 @@
 
     {{- if .Params.persons_expertises }}
       {{ range .GetTerms "persons_expertises" }}
-        {{- $expertise := partial "func/GetRealExpertise" . -}}
+        {{- $expertise := partial "func/GetRealExpertise.html" . -}}
         "knowsAbout": {{ $expertise.Title | plainify | safeHTML }},
       {{ end }}
     {{ end }}

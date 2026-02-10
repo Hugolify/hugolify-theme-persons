@@ -1,4 +1,4 @@
-{{- $person :=  partial "func/GetRealPerson" .person | default false -}}
+{{- $person :=  partial "func/GetRealPerson.html" .person | default false -}}
 {{- $section := .person.Type | default false -}}
 {{- $show_status := .show_status | default true -}}
 {{- $show_contacts := .show_contacts | default false -}}
