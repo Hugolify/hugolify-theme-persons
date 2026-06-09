@@ -1,0 +1,9 @@
+.page-persons {
+  @media (--tablet-wide) {
+    .grid {
+      .content {
+        --grid-column: span 6;
+      }
+    }
+  }
+}
