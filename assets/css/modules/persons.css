@@ -1,0 +1,17 @@
+/* css/modules/persons.css — hugolify-theme-persons entry point */
+
+/* Tokens */
+@import '../tokens/persons.css';
+
+/* Components */
+@import '../components/person.css';
+@import '../components/persons.css';
+
+/* Pages */
+@import '../pages/person.css';
+@import '../pages/persons.css';
+
+/* Modules / Taxonomies */
+@import 'persons-expertises.css';
+@import 'persons-places.css';
+@import 'persons-statutes.css';
