@@ -12,7 +12,7 @@
     --person-btn-padding: var(--item-btn-padding);
     --person-btn-text-decoration: var(--item-btn-text-decoration);
     --person-btn-text-decoration-hover: var(--item-btn-text-decoration-hover);
-    --person-color-background: var(--item-color-background);
+    --person-color-background: transparent;
     --person-color-border: var(--item-color-border);
     --person-color-text: var(--item-color-text);
     --person-color-text-muted: var(--item-color-text-muted);

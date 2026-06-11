@@ -48,7 +48,7 @@
     },
     "color": {
       "background": {
-        "$value": "{item.color.background}",
+        "$value": "transparent",
         "$type": "color"
       },
       "border": {
