@@ -1,6 +1,9 @@
 .page-persons {
   @media (--tablet-wide) {
     .grid {
+      .featured-image {
+        --grid-column: span 3;
+      }
       .content {
         --grid-column: span 6;
       }
