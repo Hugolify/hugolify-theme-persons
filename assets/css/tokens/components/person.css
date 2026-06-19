@@ -3,41 +3,11 @@
 /* person.css */
 @layer tokens {
   :root {
-    --person-border-radius: var(--item-border-radius);
-    --person-border-style: var(--item-border-style);
     --person-border-width: 0px;
-    --person-btn-border-width: var(--item-btn-border-width);
-    --person-btn-color-background: var(--item-btn-color-background);
-    --person-btn-color-text: var(--item-btn-color-text);
-    --person-btn-padding: var(--item-btn-padding);
-    --person-btn-text-decoration: var(--item-btn-text-decoration);
-    --person-btn-text-decoration-hover: var(--item-btn-text-decoration-hover);
     --person-color-background: transparent;
-    --person-color-border: var(--item-color-border);
-    --person-color-text: var(--item-color-text);
-    --person-color-text-muted: var(--item-color-text-muted);
-    --person-gap: var(--item-gap);
     --person-media-border-radius: var(--radius-pill);
-    --person-media-color-background: var(--item-media-color-background);
-    --person-media-order: var(--item-media-order);
-    --person-media-ratio: var(--item-media-ratio);
-    --person-metas-border-end: var(--item-metas-border-end);
-    --person-metas-border-start: var(--item-metas-border-start);
-    --person-metas-color-background: var(--item-metas-color-background);
-    --person-metas-font-size: var(--item-metas-font-size);
-    --person-metas-order: var(--item-metas-order);
-    --person-metas-padding-inline: var(--item-metas-padding-inline);
-    --person-metas-padding-block-start: var(--item-metas-padding-block-start);
-    --person-metas-padding-block-end: var(--item-metas-padding-block-end);
-    --person-order: var(--item-order);
     --person-padding-inline: 0px;
-    --person-padding-block: var(--item-padding-block);
     --person-shadow: var(--shadow-none);
     --person-shadow-hover: var(--shadow-none);
-    --person-title-color: var(--item-title-color);
-    --person-title-font-size: var(--item-title-font-size);
-    --person-title-font-weight: var(--item-title-font-weight);
-    --person-title-line-height: var(--item-title-line-height);
-    --person-transition: var(--item-transition);
   }
 }

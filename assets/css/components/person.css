@@ -7,53 +7,12 @@
  */
 @layer components {
   .person {
-    /* Box */
-    --item-color-background: var(--person-color-background);
-    --item-color-border: var(--person-color-border);
-    --item-color-text: var(--person-color-text);
-    --item-color-text-muted: var(--person-color-text-muted);
-    --item-border-radius: var(--person-border-radius);
-    --item-border-style: var(--person-border-style);
     --item-border-width: var(--person-border-width);
+    --item-color-background: var(--person-color-background);
+    --item-media-border-radius: var(--person-media-border-radius);
+    --item-padding-inline: var(--person-padding-inline);
     --item-shadow: var(--person-shadow);
     --item-shadow-hover: var(--person-shadow-hover);
-    --item-transition: var(--person-transition);
-
-    /* Content */
-    --item-gap: var(--person-gap);
-    --item-order: var(--person-order);
-    --item-padding-block: var(--person-padding-block);
-    --item-padding-inline: var(--person-padding-inline);
-
-    /* Title */
-    --item-title-color: var(--person-title-color);
-    --item-title-font-size: var(--person-title-font-size);
-    --item-title-font-weight: var(--person-title-font-weight);
-    --item-title-line-height: var(--person-title-line-height);
-
-    /* Metas */
-    --item-metas-border-end: var(--person-metas-border-end);
-    --item-metas-border-start: var(--person-metas-border-start);
-    --item-metas-color-background: var(--person-metas-color-background);
-    --item-metas-font-size: var(--person-metas-font-size);
-    --item-metas-order: var(--person-metas-order);
-    --item-metas-padding-block-end: var(--person-metas-padding-block-end);
-    --item-metas-padding-block-start: var(--person-metas-padding-block-start);
-    --item-metas-padding-inline: var(--person-metas-padding-inline);
-
-    /* Media */
-    --item-media-border-radius: var(--person-media-border-radius);
-    --item-media-color-background: var(--person-media-color-background);
-    --item-media-order: var(--person-media-order);
-    --item-media-ratio: var(--person-media-ratio);
-
-    /* Inner button (--btn-* is the button component's own API) */
-    --btn-border-width: var(--person-btn-border-width);
-    --btn-color-background: var(--person-btn-color-background);
-    --btn-color-text: var(--person-btn-color-text);
-    --btn-color-text-decoration: var(--person-btn-text-decoration);
-    --btn-color-text-decoration-hover: var(--person-btn-text-decoration-hover);
-    --btn-padding-inline: var(--person-btn-padding);
-    --btn-padding-block: var(--person-btn-padding);
+    
   }
 }
