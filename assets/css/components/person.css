@@ -14,5 +14,19 @@
     --item-shadow: var(--person-shadow);
     --item-shadow-hover: var(--person-shadow-hover);
     
+    &.card {
+      align-items: start;
+
+      @media (--tablet) {
+        flex-direction: row;
+        .media {
+          margin-block-end: var(--card-padding-block);
+        }
+      }
+
+      .media {
+        flex-shrink: 0;
+      }
+    }
   }
 }

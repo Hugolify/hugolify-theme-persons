@@ -24,7 +24,6 @@ params:
           material_icons: person
           material_symbols: person
           lucide: user
-          sveltiacms: person # legacy
   persons:
     thumbnail:
       desktop: '100x100'

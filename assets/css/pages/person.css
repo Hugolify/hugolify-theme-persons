@@ -1,11 +1,16 @@
-.page-persons {
-  @media (--tablet-wide) {
-    .grid {
-      .featured-image {
-        --grid-column: span 3;
-      }
-      .content {
-        --grid-column: span 6;
+@layer layout {
+  .page-persons {
+    @media (--tablet-wide) {
+      .grid {
+        .featured-image {
+          --grid-column: span 3;
+        }
+        .content {
+          --grid-column: span 6;
+        }
+        .sidebar {
+          --grid-column: span 3;
+        }
       }
     }
   }

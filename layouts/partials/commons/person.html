@@ -22,7 +22,7 @@
       {{- end -}}
       {{- if $show_description -}}
         {{ with .Description }}
-          <p class="description">{{ partial "func/TruncateContent.html" (dict "content" .) }}</p>
+          <p class="description">{{ partial "func/TruncateContent.html" (dict "content" . "limit" 90) }}</p>
         {{ end }}
       {{- end -}}
       {{- if $show_contacts -}}
