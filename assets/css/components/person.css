@@ -10,6 +10,7 @@
     --item-border-width: var(--person-border-width);
     --item-color-background: var(--person-color-background);
     --item-media-border-radius: var(--person-media-border-radius);
+    --item-media-max-width: var(--person-media-max-width);
     --item-padding-inline: var(--person-padding-inline);
     --item-shadow: var(--person-shadow);
     --item-shadow-hover: var(--person-shadow-hover);

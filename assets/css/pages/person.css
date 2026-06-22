@@ -1,13 +1,16 @@
 @layer layout {
   .page-persons {
-    @media (--tablet-wide) {
+    @media (--tablet) {
       .grid {
-        .featured-image {
-          --grid-column: span 3;
-        }
+        .featured-image,
         .content {
           --grid-column: span 6;
         }
+      }
+    }
+    @media (--tablet-wide) {
+      .grid {
+        .featured-image,
         .sidebar {
           --grid-column: span 3;
         }

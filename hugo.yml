@@ -10,7 +10,10 @@ module:
       target: i18n
     - source: layouts
       target: layouts
+
 params:
+
+  # Hugolify Admin
   admin:
     collections:
       persons:
@@ -24,13 +27,17 @@ params:
           material_icons: person
           material_symbols: person
           lucide: user
+
+  # Image
   persons:
     thumbnail:
       desktop: '100x100'
       mobile: '100x100'
+      sizes: 100vw, 50vw, 25vw
     image:
       desktop: '306x'
       mobile: '198x'
+      sizes: 100vw, 50vw, 25vw
 
 # Default
 permalinks:

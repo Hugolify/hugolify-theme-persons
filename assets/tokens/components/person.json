@@ -18,6 +18,10 @@
           "$value": "{radius.pill}",
           "$type": "dimension"
         }
+      },
+      "maxWidth": {
+        "$value": "100px",
+        "$type": "dimension"
       }
     },
     "padding": {
