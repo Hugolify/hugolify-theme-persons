@@ -1,0 +1,12 @@
+/* components/persons.css */
+/*
+ * .persons remaps the full --items-* API onto its --persons-* tokens, so any
+ * value can be tuned from persons.json without touching this file.
+ * Usage: <article class="items persons">
+ */
+@layer components {
+  .persons {
+    --items-min-width: var(--persons-min-width);
+    --items-nav-margin-block-start: var(--persons-nav-margin-block-start);
+  }
+}

@@ -1,0 +1,33 @@
+/* components/person.css */
+/*
+ * .person remaps the full --item-* API (and the inner --btn-*) onto its
+ * --person-* tokens, so any value can be tuned from person.json without
+ * touching this file.
+ * Usage: <article class="item person">
+ */
+@layer components {
+  .person {
+    --item-border-width: var(--person-border-width);
+    --item-color-background: var(--person-color-background);
+    --item-media-border-radius: var(--person-media-border-radius);
+    --item-media-max-width: var(--person-media-max-width);
+    --item-padding-inline: var(--person-padding-inline);
+    --item-shadow: var(--person-shadow);
+    --item-shadow-hover: var(--person-shadow-hover);
+    
+    &.card {
+      align-items: start;
+
+      @media (--tablet) {
+        flex-direction: row;
+        .media {
+          margin-block-end: var(--card-padding-block);
+        }
+      }
+
+      .media {
+        flex-shrink: 0;
+      }
+    }
+  }
+}

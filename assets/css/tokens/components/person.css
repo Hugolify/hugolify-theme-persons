@@ -1,0 +1,14 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* person.css */
+@layer tokens {
+  :root {
+    --person-border-width: 0px;
+    --person-color-background: transparent;
+    --person-media-border-radius: var(--radius-pill);
+    --person-media-max-width: 100px;
+    --person-padding-inline: 0px;
+    --person-shadow: var(--shadow-none);
+    --person-shadow-hover: var(--shadow-none);
+  }
+}

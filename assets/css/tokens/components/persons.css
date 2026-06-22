@@ -1,0 +1,9 @@
+/* Do not edit directly, this file was auto-generated. */
+
+/* persons.css */
+@layer tokens {
+  :root {
+    --persons-min-width: 25ch;
+    --persons-nav-margin-block-start: var(--items-nav-margin-block-start);
+  }
+}

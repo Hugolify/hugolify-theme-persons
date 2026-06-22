@@ -1,0 +1,44 @@
+{
+  "person": {
+    "border": {
+      "width": {
+        "$value": "0px",
+        "$type": "dimension"
+      }
+    },
+    "color": {
+      "background": {
+        "$value": "transparent",
+        "$type": "color"
+      }
+    },
+    "media": {
+      "border": {
+        "radius": {
+          "$value": "{radius.pill}",
+          "$type": "dimension"
+        }
+      },
+      "maxWidth": {
+        "$value": "100px",
+        "$type": "dimension"
+      }
+    },
+    "padding": {
+      "inline": {
+        "$value": "0px",
+        "$type": "dimension"
+      }
+    },
+    "shadow": {
+      "default": { 
+        "$value": "{shadow.none}", 
+        "$type": "shadow" 
+      },
+      "hover": { 
+        "$value": "{shadow.none}", 
+        "$type": "shadow" 
+      }
+    }
+  }
+}
