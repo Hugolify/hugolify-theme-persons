@@ -12,6 +12,7 @@
 @import '../pages/persons.css';
 
 /* Modules / Taxonomies */
+@import 'persons-awards.css';
 @import 'persons-expertises.css';
 @import 'persons-places.css';
 @import 'persons-statutes.css';
