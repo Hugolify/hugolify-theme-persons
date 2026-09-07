@@ -1,4 +1,8 @@
 <div class="content">
+  {{ $awards := "persons/filters/persons_awards.html" }}
+  {{ if templates.Exists ( printf "partials/%s" $awards ) }}
+    {{ partial $awards . }}
+  {{ end }}
   {{ $statutes := "persons/filters/persons_statutes.html" }}
   {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
     {{ partial $statutes . }}
