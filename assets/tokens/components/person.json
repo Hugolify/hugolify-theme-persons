@@ -1,6 +1,10 @@
 {
   "person": {
     "border": {
+      "radius": {
+        "$value": "0px",
+        "$type": "dimension"
+      },
       "width": {
         "$value": "0px",
         "$type": "dimension"

@@ -3,6 +3,7 @@
 /* person.css */
 @layer tokens {
   :root {
+    --person-border-radius: 0px;
     --person-border-width: 0px;
     --person-color-background: transparent;
     --person-media-border-radius: var(--radius-pill);
