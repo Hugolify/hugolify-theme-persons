@@ -1,10 +1,10 @@
-@layer layout {
+@layer pages {
   .page-persons {
     @media (--tablet) {
       .grid {
         .featured-image,
         .content {
-          --grid-column: span 6;
+          --grid-column: span calc(var(--columns) / 2);
         }
       }
     }
@@ -12,7 +12,7 @@
       .grid {
         .featured-image,
         .sidebar {
-          --grid-column: span 3;
+          --grid-column: span calc(var(--columns) / 4);
         }
       }
     }
