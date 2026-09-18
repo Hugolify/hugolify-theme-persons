@@ -1,0 +1,18 @@
+{{- /*
+  Optional hook rendered by `commons/contact/contacts.html`: appends the vCard
+  download to the contact list of a person page.
+
+  `contacts.html` is shared with places and with the person cards of a listing,
+  so the current page is checked before rendering anything.
+
+  @context {map} . The contact object.
+*/ -}}
+{{- with page -}}
+  {{- if and (eq .Kind "page") (eq .Type "persons") -}}
+    {{- with partial "persons/vcard.html" . -}}
+      <li class="vcard">
+        {{- partial "commons/contact/vcard.html" . -}}
+      </li>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

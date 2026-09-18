@@ -39,6 +39,10 @@ params:
       desktop: '306x'
       mobile: '198x'
       sizes: 100vw, 50vw, 25vw
+    # vCard published next to each person page: /team/:slug/contact-info.vcf
+    vcard:
+      enable: true
+      organization: '' # defaults to the site title
 
 # Default
 permalinks:

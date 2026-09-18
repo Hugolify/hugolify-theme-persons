@@ -1,0 +1,66 @@
+{{- /*
+  Builds the vCard of a person and returns it as a `contact-info.vcf` resource
+  published next to the person page, e.g. /team/jane-doe/contact-info.vcf
+
+  Returns `false` when disabled through `params.persons.vcard.enable`.
+
+  @param  {page}             context  The person page.
+  @return {resource|boolean}          The vCard resource, or false.
+
+  @example
+    {{ with partial "persons/vcard.html" . }}
+      {{ partial "commons/contact/vcard.html" . }}
+    {{ end }}
+*/ -}}
+
+{{- $page := . -}}
+{{- $vcard := false -}}
+
+{{- $options := site.Params.persons.vcard | default dict -}}
+{{- if $options.enable -}}
+
+  {{- $properties := slice -}}
+
+  {{- /* Full name */ -}}
+  {{- with $page.Title -}}
+    {{- $properties = $properties | append (printf "FN:%s" (partial "func/EscapeVCard.html" .)) -}}
+  {{- end -}}
+
+  {{- /* Structured name: family;given;additional;prefixes;suffixes */ -}}
+  {{- $lastname := partial "func/EscapeVCard.html" ($page.Params.lastname | default "") -}}
+  {{- $firstname := partial "func/EscapeVCard.html" ($page.Params.firstname | default "") -}}
+  {{- if or $lastname $firstname -}}
+    {{- $properties = $properties | append (printf "N:%s;%s;;;" $lastname $firstname) -}}
+  {{- end -}}
+
+  {{- /* Job title(s), from the persons_statutes taxonomy */ -}}
+  {{- with $page.Params.persons_statutes -}}
+    {{- range (cond (reflect.IsSlice .) . (slice .)) -}}
+      {{- with . -}}
+        {{- $properties = $properties | append (printf "TITLE:%s" (partial "func/EscapeVCard.html" .)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Organization */ -}}
+  {{- with $options.organization | default site.Title -}}
+    {{- $properties = $properties | append (printf "ORG:%s" (partial "func/EscapeVCard.html" .)) -}}
+  {{- end -}}
+
+  {{- with $page.Params.contact -}}
+    {{- with .phone -}}
+      {{- $properties = $properties | append (printf "TEL;TYPE=WORK,VOICE:%s" (partial "func/EscapeVCard.html" .)) -}}
+    {{- end -}}
+    {{- with .fax -}}
+      {{- $properties = $properties | append (printf "TEL;TYPE=WORK,FAX:%s" (partial "func/EscapeVCard.html" .)) -}}
+    {{- end -}}
+    {{- with .email -}}
+      {{- $properties = $properties | append (printf "EMAIL:%s" (partial "func/EscapeVCard.html" .)) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $vcard = partial "commons/contact/vcard/build.html" (dict "page" $page "properties" $properties) -}}
+
+{{- end -}}
+
+{{- return $vcard -}}
