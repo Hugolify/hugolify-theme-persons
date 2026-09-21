@@ -3,6 +3,6 @@
   {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
     {{ partial $statutes . }}
   {{ end }}
-  {{ partial "commons/item/title" . }}
-  {{ partial "commons/item/description" . }}
+  {{ partial "commons/item/title.html" . }}
+  {{ partial "commons/item/description.html" . }}
 </a>

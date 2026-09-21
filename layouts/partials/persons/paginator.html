@@ -1,5 +1,5 @@
 {{/* Sort by statute weight then lastname, and paginate the sorted collection */}}
-{{- $pages := partial "func/GetPersonsOrderByStatutes" . -}}
-{{- $atf := cond (partial "func/HasImageHero" .) false true -}}
-{{ partial "persons/items" (dict "pages" $pages "abovethefold" $atf) }}
+{{- $pages := partial "func/GetPersonsOrderByStatutes.html" . -}}
+{{- $atf := cond (partial "func/HasImageHero.html" .) false true -}}
+{{ partial "persons/items.html" (dict "pages" $pages "abovethefold" $atf) }}
 {{ partial "nav/pagination.html" . }}
