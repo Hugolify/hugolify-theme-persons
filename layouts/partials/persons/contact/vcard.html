@@ -1,18 +1,15 @@
 {{- /*
-  Optional hook rendered by `commons/contact/contacts.html`: appends the vCard
-  download to the contact list of a person page.
+  Hook read by `commons/contact/contacts.html`: returns the vCard listed with the
+  contact details of a person page, or false. The list renders the entry itself.
 
-  `contacts.html` is shared with places and with the person cards of a listing,
-  so the current page is checked before rendering anything.
+  `contacts.html` is shared with the person cards of a listing, so only the
+  person page itself gets its vCard.
 
-  @context {map} . The contact object.
+  @context {page}             . The current page.
+  @return  {resource|boolean}   The vCard resource, or false.
 */ -}}
-{{- with page -}}
-  {{- if and (eq .Kind "page") (eq .Type "persons") -}}
-    {{- with partial "persons/vcard.html" . -}}
-      <li class="vcard">
-        {{- partial "commons/contact/vcard.html" . -}}
-      </li>
-    {{- end -}}
-  {{- end -}}
+{{- $vcard := false -}}
+{{- if eq .Kind "page" -}}
+  {{- $vcard = partial "persons/vcard.html" . -}}
 {{- end -}}
+{{- return $vcard -}}
