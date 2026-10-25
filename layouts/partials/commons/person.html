@@ -7,7 +7,6 @@
 {{- $show_btn := .show_btn | default true -}}
 
 {{- with $person -}}
-  {{- $type := .Type -}}
   <aside class="card person">
     <div class="content">
       {{- if $show_status -}}
@@ -17,8 +16,11 @@
         {{- end -}}
       {{- end -}}
       {{- with .Title -}}
-        {{- $title := cond (eq $type "persons") (.) (. | humanize) -}}
-        <p class="title">{{ partial "func/PrepareHTML.html" $title }}</p>
+        {{- $title := partial "func/PrepareHTML.html" . -}}
+        {{- if not $person.File -}}
+          {{- $title = $title | humanize -}}
+        {{- end -}}
+        <p class="title">{{ $title }}</p>
       {{- end -}}
       {{- if $show_description -}}
         {{ with .Description }}
