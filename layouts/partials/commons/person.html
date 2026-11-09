@@ -11,7 +11,7 @@
     <div class="content">
       {{- if $show_status -}}
         {{- $persons_statutes := "persons/persons_statutes.html" -}}
-        {{- if templates.Exists (printf "partials/%s" $persons_statutes) -}}
+        {{- if templates.Exists (printf "_partials/%s" $persons_statutes) -}}
           {{- partial $persons_statutes . -}}
         {{- end -}}
       {{- end -}}

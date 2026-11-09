@@ -1,24 +1,24 @@
 {{- $events := "persons/events.html" }}
-{{ if templates.Exists ( printf "partials/%s" $events ) }}
+{{ if templates.Exists ( printf "_partials/%s" $events ) }}
   {{ partial $events . }}
 {{ end }}
 
 {{- $services := "persons/services.html" }}
-{{ if templates.Exists ( printf "partials/%s" $services ) }}
+{{ if templates.Exists ( printf "_partials/%s" $services ) }}
   {{ partial $services . }}
 {{ end }}
 
 {{- $realestates := "persons/realestates.html" }}
-{{ if templates.Exists ( printf "partials/%s" $realestates ) }}
+{{ if templates.Exists ( printf "_partials/%s" $realestates ) }}
   {{ partial $realestates . }}
 {{ end }}
 
 {{- $posts := "persons/posts.html" }}
-{{ if templates.Exists ( printf "partials/%s" $posts ) }}
+{{ if templates.Exists ( printf "_partials/%s" $posts ) }}
   {{ partial $posts . }}
 {{ end }}
 
 {{- $publications := "persons/publications.html" }}
-{{ if templates.Exists ( printf "partials/%s" $publications ) }}
+{{ if templates.Exists ( printf "_partials/%s" $publications ) }}
   {{ partial $publications . }}
 {{ end }}

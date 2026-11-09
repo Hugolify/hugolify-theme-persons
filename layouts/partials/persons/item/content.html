@@ -1,6 +1,6 @@
 <a href="{{ .Permalink }}" class="content">
   {{ $statutes := "persons/item/persons_statutes.html" }}
-  {{ if templates.Exists ( printf "partials/%s" $statutes ) }}
+  {{ if templates.Exists ( printf "_partials/%s" $statutes ) }}
     {{ partial $statutes . }}
   {{ end }}
   {{ partial "commons/item/title.html" . }}

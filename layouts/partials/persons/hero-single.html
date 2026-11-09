@@ -4,7 +4,7 @@
       <div class="hero-content">
         <header class="heading">
           {{- $persons_statutes := "persons/persons_statutes.html" }}
-          {{- if templates.Exists ( printf "partials/%s" $persons_statutes ) }}
+          {{- if templates.Exists ( printf "_partials/%s" $persons_statutes ) }}
             {{ partial $persons_statutes . }}
           {{- end }}
           <h1>{{ partial "func/PrepareHTML.html" .Title }}</h1>

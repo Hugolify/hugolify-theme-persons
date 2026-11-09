@@ -1,10 +1,10 @@
 {{- $persons_awards := "persons/persons_awards.html" }}
 {{- $persons_places := "persons/persons_places.html" }}
 <div class="sidebar" {{- partial "func/SetAnim.html" (dict "element" "sidebar") }}>
-  {{- if templates.Exists ( printf "partials/%s" $persons_awards ) }}
+  {{- if templates.Exists ( printf "_partials/%s" $persons_awards ) }}
     {{- partial $persons_awards . }}
   {{- end }}
-  {{- if templates.Exists ( printf "partials/%s" $persons_places ) }}
+  {{- if templates.Exists ( printf "_partials/%s" $persons_places ) }}
     {{- partial $persons_places . }}
   {{- end }}
 </div>
