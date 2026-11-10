@@ -1,3 +1,7 @@
+education:
+  title:
+    one: Education
+    other: Education
 persons:
   all: All persons
   discover: Discover person

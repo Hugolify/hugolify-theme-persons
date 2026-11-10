@@ -1,0 +1,38 @@
+{{- /* Education of a person, from hugolify-admin's `education` field: one
+       item per entry, its title, then its school and year. The same entries
+       feed hasCredential and alumniOf, see func/GetSchemaPerson.html in
+       hugolify-theme. An entry with no title is named by its school; a line
+       of plain text is listed as is. Anything but a list is ignored.
+
+       Shown in persons/sidebar.html, styled by the aside.list component of
+       the styling module like the awards and places next to it. */ -}}
+{{- with .Params.education }}
+  {{- if reflect.IsSlice . }}
+  <aside class="list list-education">
+    <p>{{ i18n "education.title" (len .) }}</p>
+    <ul>
+      {{- range . }}
+        {{- $name := . }}
+        {{- $details := slice }}
+        {{- if reflect.IsMap . }}
+          {{- $name = .title | default .school }}
+          {{- if .title }}
+            {{- with .school }}{{ $details = $details | append . }}{{ end }}
+          {{- end }}
+          {{- with .year }}{{ $details = $details | append (string .) }}{{ end }}
+        {{- end }}
+        {{- with $name }}
+          <li>
+            <div>
+              {{ partial "func/PrepareHTML.html" . }}
+              {{- with $details }}
+                <br><span>{{ partial "func/PrepareHTML.html" (delimit . ", ") }}</span>
+              {{- end }}
+            </div>
+          </li>
+        {{- end }}
+      {{- end }}
+    </ul>
+  </aside>
+  {{- end }}
+{{- end }}

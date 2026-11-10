@@ -20,6 +20,16 @@ imports:
   - path: github.com/hugolify/hugolify-theme
 ```
 
+## Education
+
+The `education` field of hugolify-admin's persons collection (title, school, year, category) is listed in the sidebar of the person page by `persons/education.html`: one item per entry, its title, then its school and year. The heading is the `education.title` translation. The core theme publishes the same entries as structured data (`hasCredential`, `alumniOf`).
+
+A site that overrides `persons/sidebar.html` places it itself:
+
+```go-html-template
+{{ partial "persons/education.html" . }}
+```
+
 ## vCard
 
 Each person page publishes a vCard (`.vcf`) next to it, e.g. `/team/jane-doe/contact-info.vcf`.

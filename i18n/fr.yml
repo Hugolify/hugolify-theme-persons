@@ -1,3 +1,7 @@
+education:
+  title:
+    one: Formation
+    other: Formations
 persons:
   all: Toutes les personnes
   latest: Dernières personnes
