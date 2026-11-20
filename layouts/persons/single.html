@@ -11,7 +11,7 @@
     renders its permalink, and here the download link sits two conditions deep:
     `commons/contact/contacts.html` gives up before reaching its vCard hook
     unless the person has a phone, a fax or an email. A person without contact
-    details would then have no `contact-info.vcf` at all. Publishing here keeps
+    details would then have no `.vcf` at all. Publishing here keeps
     the file reachable for every person page, whatever the contact block shows.
 
     `with` skips it when `params.persons.vcard.enable` is off, the partial

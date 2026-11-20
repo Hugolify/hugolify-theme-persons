@@ -1,6 +1,7 @@
 {{- /*
-  Builds the vCard of a person and returns it as a `contact-info.vcf` resource
-  published next to the person page, e.g. /team/jane-doe/contact-info.vcf
+  Builds the vCard of a person and returns it as a `.vcf` resource named after
+  the page slug and published next to the person page, e.g.
+  /team/jane-doe/jane-doe.vcf
 
   Returns `false` when disabled through `params.persons.vcard.enable`.
 

@@ -32,7 +32,7 @@ A site that overrides `persons/sidebar.html` places it itself:
 
 ## vCard
 
-Each person page publishes a vCard (`.vcf`) next to it, e.g. `/team/jane-doe/contact-info.vcf`.
+Each person page publishes a vCard (`.vcf`) next to it, named after the page slug, e.g. `/team/jane-doe/jane-doe.vcf`.
 It is built from `title`, `firstname`, `lastname`, `persons_statutes` and `contact` (`phone`, `fax`, `email`).
 
 The download link is added to the contact list of the person page by
