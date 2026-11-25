@@ -36,6 +36,11 @@ params:
       desktop: '100x100'
       mobile: '100x100'
     image:
+      # Fill anchor of the person pictures (func/GetImageCrop): the 100x100 item thumbnail, also
+      # for the authors or realestates_persons items that show the person, and the featured image
+      # once its size gets a height. faces keeps the face in the box, as avatar.crop does for the
+      # round portraits; set both to change the anchor of every portrait.
+      crop: faces
       desktop: '306x'
       mobile: '198x'
       sizes: 100vw, 50vw, 25vw
