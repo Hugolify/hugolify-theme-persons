@@ -5,6 +5,7 @@
   <div class="container">
     <div class="row">
       <div class="hero-content">
+        {{- partial "commons/hero/back.html" . }}
         <header class="heading">
           {{- $persons_statutes := "persons/persons_statutes.html" }}
           {{- if templates.Exists ( printf "_partials/%s" $persons_statutes ) }}
