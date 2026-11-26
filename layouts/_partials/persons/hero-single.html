@@ -1,4 +1,7 @@
-<header class="hero hero-with-second-content" {{- partial "func/SetAnim.html" (dict "element" "hero") }}>
+{{- /* Drawn without hero params, this hero takes the site's hero defaults
+       (params.hero.ui, e.g. its theme), as the other heroes do */ -}}
+{{- $class := partial "func/GetHeroClasses" (dict "ui" site.Params.hero.ui) -}}
+<header class="{{ $class }} hero-with-second-content" {{- partial "func/SetAnim.html" (dict "element" "hero") }}>
   <div class="container">
     <div class="row">
       <div class="hero-content">
