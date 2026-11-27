@@ -23,6 +23,7 @@ params:
             value: false
         icon:
           bootstrap_icons: person
+          hugeicons: User
           iconoir: user
           material_icons: person
           material_symbols: person
